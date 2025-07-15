@@ -1,0 +1,23 @@
+|  # | Topic                             | Asked by Companies?                       | Notes                                                                 |
+| -- | --------------------------------- | ----------------------------------------  | --------------------------------------------------------------------- |
+|  1 | Singly Linked List                | ✅ Yes (Amazon, Meta, Google)             | Used in all LL problems                                               |
+|  2 | Insert at Beginning/End           | ✅ Yes (Google, Amazon)                   | Asked directly in simpler rounds                                      |
+|  3 | Delete Node in LL                 | ✅ Yes (Google, Amazon)                   | Famous: "Delete node without head"                                    |
+|  4 | Doubly Linked List                | ✅ Yes (Meta, Amazon)                     | Used in LRU Cache                                                     |
+|  5 | Circular Linked List              | ✅ Yes (Amazon, Google)                   | Used in cycle-based problems                                          |
+|  6 | Circular Doubly Linked List       | ⚠️ Rare Direct                            | Used in system design-level questions                                 |
+|  7 | Reverse a Linked List             | ✅ Amazon, Microsoft, Google, Meta, Apple | Most fundamental linked list question — used as a base in others      |
+|  8 | Middle of a Linked List           | ✅ Amazon, Microsoft, Meta, Google        | Asked in logic-building and pointer movement-based problems           |
+|  9 | Merge Two Sorted Linked Lists     | ✅ Amazon, Microsoft, Apple, Google       | Asked in both recursion and iteration form; also used in merge sort   |
+| 10 | Palindrome Linked List            | ✅ Google, Meta, Amazon                   | Tests reverse+compare logic; follow-up includes O(1) space constraint |
+| 11 | Detect Cycle in Linked List       | ✅ Amazon, Microsoft, Google              | Classic Floyd’s Cycle Detection — asked in many forms                 |
+| 12 | Remove Cycle in Linked List       | ✅ Amazon, Google, Meta                   | Follow-up of cycle detection — locate start and remove it             |
+| 13 | Flatten Multilevel DLL            | ✅ Google, Meta                           | Doubly LL + Recursion + Stack logic — advanced linked list concept    |
+| 14 | Clone Linked List with Random Ptr | ✅ Amazon, Google, Meta, Microsoft        | Requires hashmap or in-place solution — considered tricky             |
+| 15 | Add Two Numbers                   | ✅ Amazon, Meta, Google, Apple            | Often tested for carry handling, recursion, or list reversal          |
+| 16 | Reverse Linked List II            | ✅ Meta, Amazon, Google                   | Requires segment reversal — good for pointer manipulation testing     |
+| 17 | LRU Cache                         | ✅ Amazon, Google, Microsoft, Meta        | Common system design-style coding question — uses LL + HashMap        |
+| 18 | Rotate Linked List                | ✅ Google, Microsoft, Amazon              | Tests circular traversal logic — usually combined with math (modulo)  |
+| 19 | Reverse Nodes in k-Group          | ✅ Amazon, Microsoft, Meta, Google        | Hard-level — combines LL reversal, recursion/iteration, segment logic |
+| 20 | Intersection Point of Two LL      | ✅ Amazon, Google, Meta, Microsoft        | Use two-pointer technique to sync lengths; often asked with edge cases |
+| 21 | Reorder Linked List               | ✅ Amazon, Meta, Google, Microsoft        | Combines: find middle + reverse 2nd half + merge alternately           |
