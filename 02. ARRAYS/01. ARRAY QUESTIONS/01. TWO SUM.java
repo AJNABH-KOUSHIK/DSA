@@ -17,7 +17,7 @@ public class twosum {
         // That’s a static method. Inside it, you're calling answer(arr, target) directly. In Java:
        // You can call other static methods directly inside a static context (like in main).
        // You cannot call a non-static method directly from within a static method without an object instance.
-      // This is a compile-time error known as "non-static method cannot be referenced from a static context."
+      // This is a compile-time error known as "non-static method cannot be referenced from a static context.."
         for (int i =0; i <arr.length ; i++) {  
             for (int j = i+1; j <arr.length ; j++) {
                       int sum=arr[i]+arr[j];
