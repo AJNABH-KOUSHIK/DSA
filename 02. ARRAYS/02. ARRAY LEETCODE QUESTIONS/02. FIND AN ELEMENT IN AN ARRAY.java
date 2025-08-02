@@ -1,3 +1,4 @@
+// LEETCODE 34
 // Take n as an integer input. Declare an array of size n that stores value of int data-type.
 // Then take n integer inputs and store them in the array one by one
 // Your given an another number d
