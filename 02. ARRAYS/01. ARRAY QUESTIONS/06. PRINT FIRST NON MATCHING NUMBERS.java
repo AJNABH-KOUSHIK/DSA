@@ -22,7 +22,7 @@ public class array{
             for(int j=0;j<second;j++){
                   if(arr1[i]!=arr2[i]){
                     System.out.println(i);
-                    return;
+                    break;
                   }
             }
         }
