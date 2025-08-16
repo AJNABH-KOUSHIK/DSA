@@ -28,12 +28,18 @@ int main() { // same for both singly and doubly
             newNode->prev = temp;
         }
     }
-    printf("Forward: ");
+    printf("Forward: \n");
     temp = head;
     while (temp!=NULL) {  // same for both singly and doubly
-        printf("%d ", temp->data); // same for both single and doubly
+        printf("%d ", temp->data);
+        if (temp->next == NULL) break;// same for both single and doubly
         temp = temp->next; // same for both singly and doubly
+    } 
+    printf("\nReverse: \n");
+    while (temp!=NULL) {  // same for both singly and doubly
+        printf("%d ", temp->data); // same for both single and doubly
+        temp = temp->prev; // same for both singly and doubly
     } // same for both singly and doubly
-    printf("null"); // same for both singly and doubly
+     // same for both singly and doubly
     return 0; // same for both singly and doubly
 } // same for both singly and doubly
