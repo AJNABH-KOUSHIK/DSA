@@ -29,4 +29,26 @@ int main() {
     push(value);
     display();
     return 0;
+//    ( OR )
+//     printf("Enter the value to push(press x to exit):");
+//     int value;
+//     char choice;
+//     while (1) {
+//         printf("\nEnter your choice: ");
+//         scanf(" %c", &choice); 
+//          if (choice == 'x') {
+//             printf("Exiting program.\n");
+//             break;
+//         } else if (choice == 'p') {
+//             printf("Enter the value to push: ");
+//             scanf("%d", &value);
+//             push(value);
+//             display();
+//         }  else {
+//             printf("Invalid choice. Please try again.\n");
+// }
+//     }
+//         pop();
+//  display();
+//     return 0;
 }
