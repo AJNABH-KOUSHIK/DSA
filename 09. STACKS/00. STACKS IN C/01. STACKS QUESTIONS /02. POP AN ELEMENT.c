@@ -50,4 +50,14 @@ int main() {
         pop();
  display();
     return 0;
+    // OR 
+    // int value;
+    // scanf("%d",&value);
+    // push(value);
+    // scanf("%d",&value);
+    // push(value);
+    // display();
+    // pop();
+    // display();
+    // return 0;
 }
