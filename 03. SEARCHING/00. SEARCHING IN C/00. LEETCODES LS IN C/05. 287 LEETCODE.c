@@ -1,18 +1,21 @@
 #include <stdio.h>
-int findDuplicate(int* nums, int numsSize) {
-    for (int i = 0; i < numsSize; i++) {
-        for (int j = i + 1; j < numsSize; j++) {
-            if (nums[i] == nums[j]) {
-                return nums[i];
+int main() {
+    int n;
+    printf("Enter the n : ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter the elements : ");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
+            if (arr[i] == arr[j]) {
+                printf("Repeated number is : %d\n", arr[i]);
+                return 0;   // stop after finding first duplicate
             }
         }
     }
-    return -1; // should never happen as per problem statement
-}
-// Example usage
-int main() {
-    int nums[] = {1, 3, 4, 2, 2};
-    int n = sizeof(nums) / sizeof(nums[0]);
-    printf("Duplicate: %d\n", findDuplicate(nums, n));
+    printf("No repeated number found\n");
     return 0;
 }
