@@ -1,28 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
-int findNumbers(int *nums,int numsize){
-    int count=0;
-    for(int i=0;i<numsize;i++){
-    int x=abs(nums[i]);
-    int digit=0;
-    if(x==0){
-        digit=1;
-    }else{
-        while(x>0){
-            digit++;
-            x/=10;
+int main() {
+    int n;
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d numbers:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    printf("Entered numbers are: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    int answer = 0;
+    printf("\nNumbers with even number of digits are: ");
+    for (int i = 0; i < n; i++) {
+        int k = arr[i];
+        int count = 0;
+        while (k > 0) {
+                k = k / 10;
+                count++;
+        }
+        if (count % 2 == 0) {
+            printf("%d ", arr[i]);  // print number with even digits
+            answer++;
         }
     }
-    if((digit&1)==0){
-        count++;
-    }
-    }
-    return count;
-}
-int main() {
-    int nums[] = {12, 345, 2, 6, 7896};
-    int n = sizeof(nums) / sizeof(nums[0]); //is a classic trick in C to calculate the number of elements in an array. 4*5/4=5
-    int result = findNumbers(nums, n);
-    printf("Count = %d\n", result);  
+    printf("\nTotal count = %d\n", answer);
     return 0;
 }
