@@ -1,45 +1,51 @@
 #include <stdio.h>
 #include <stdlib.h>
-struct Node { // same for both singly and doubly
-    int data; // same for both singly and doubly
-    struct Node *next, *prev; // same for both singly and doubly
-}; // same for both singly and doubly
-int main() { // same for both singly and doubly
-    struct Node *head=NULL; // same for both singly and doubly
-    struct Node *temp=NULL; // same for both singly and doubly
-    struct Node *newNode=NULL; // same for both singly and doubly
-    int n,val;
-    printf("How many nodes? ");
-    scanf("%d", &n);
-    for (int i = 0; i < n; i++) {
-        printf("Enter value: ");
-        scanf("%d", &val);
-        newNode = (struct Node*)malloc(sizeof(struct Node)); 
-        newNode->data = val; 
-        newNode->next = NULL;
-        newNode->prev = NULL;
-        if (!head) {
-            head = newNode;
-        } else {
-            temp = head;
-            while (temp->next)
-            temp = temp->next;
-            temp->next = newNode;
-            newNode->prev = temp;
-        }
+struct Node {
+    int data;
+    struct Node *prev;  // Pointer to previous node
+    struct Node *next;  // Pointer to next node
+};
+int main() {
+    struct Node *head = NULL;
+    struct Node *second = NULL;
+    struct Node *third = NULL;
+    // Allocate memory for 3 nodes
+    head = (struct Node*)malloc(sizeof(struct Node));
+    second = (struct Node*)malloc(sizeof(struct Node));
+    third = (struct Node*)malloc(sizeof(struct Node));
+    // Input data for nodes
+    printf("Enter first node data: ");
+    scanf("%d", &head->data);
+    printf("Enter second node data: ");
+    scanf("%d", &second->data);
+    printf("Enter third node data: ");
+    scanf("%d", &third->data);
+    // Link the nodes (double links)
+    head->prev = NULL;      // first node's prev = NULL
+    head->next = second;    // first node's next = second
+    second->prev = head;    // second's prev = head
+    second->next = third;   // second's next = third
+    third->prev = second;   // third's prev = second
+    third->next = NULL;     // last node's next = NULL
+    // Print list forward
+    printf("\nDoubly Linked List (forward):\n");
+    struct Node* temp = head;
+    while (temp != NULL) {
+        printf("%d <-> ", temp->data);
+        temp = temp->next;
     }
-    printf("Forward: \n");
-    temp = head;
-    while (temp!=NULL) {  // same for both singly and doubly
-        printf("%d ", temp->data);
-        if (temp->next == NULL) break;// same for both single and doubly
-        temp = temp->next; // same for both singly and doubly
-    } 
-    printf("\nReverse: \n");
-    while (temp!=NULL) {  // same for both singly and doubly
-        printf("%d ", temp->data); // same for both single and doubly
-        temp = temp->prev; // same for both singly and doubly
-    } // same for both singly and doubly
-     // same for both singly and doubly
-    return 0; // same for both singly and doubly
-} // same for both singly and doubly
+    printf("NULL\n");
+    // Print list backward (using prev pointers)
+    printf("\nDoubly Linked List (backward):\n");
+    temp = third;  // start from last node
+    while (temp != NULL) {
+        printf("%d <-> ", temp->data);
+        temp = temp->prev;
+    }
+    printf("NULL\n");
+    // Free allocated memory
+    free(head);
+    free(second);
+    free(third);
+    return 0;
+}
